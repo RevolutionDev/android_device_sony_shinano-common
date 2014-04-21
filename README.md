@@ -1,5 +1,5 @@
-Copyright 2013 - The CyanogenMod Project
+Copyright 2013 - Krabappel2548
 
-android_device_sony_rhine-common
+android_device_sony_shinano-common
 ================================
 

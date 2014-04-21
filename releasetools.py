@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Custom OTA Package commands for rhine"""
+"""Custom OTA Package commands for shinano"""
 
 import os
 
@@ -21,8 +21,8 @@ TARGET_DIR = os.getenv('OUT')
 TARGET_DEVICE = os.getenv('CM_BUILD')
 
 def FullOTA_InstallEnd(self):
-  if TARGET_DEVICE == "honami" or TARGET_DEVICE == "togari":
-    self.output_zip.write(os.path.join(TARGET_DIR, "c6x02.sh"), "c6x02.sh")
-    self.script.AppendExtra('package_extract_file("c6x02.sh", "/tmp/c6x02.sh");')
-    self.script.AppendExtra('set_perm(0, 0, 0777, "/tmp/c6x02.sh");')
-    self.script.AppendExtra('run_program("/tmp/c6x02.sh");')
+  if TARGET_DEVICE == "sirius":
+    self.output_zip.write(os.path.join(TARGET_DIR, "d6x02.sh"), "d6x02.sh")
+    self.script.AppendExtra('package_extract_file("d6x02.sh", "/tmp/d6x02.sh");')
+    self.script.AppendExtra('set_perm(0, 0, 0777, "/tmp/d6x02.sh");')
+    self.script.AppendExtra('run_program("/tmp/d6x02.sh");')
