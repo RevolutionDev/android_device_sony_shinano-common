@@ -11,3 +11,4 @@ LOCAL_MODULE := libinit_shinano
 include $(BUILD_STATIC_LIBRARY)
 
 endif
+

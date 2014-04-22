@@ -132,8 +132,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/wifi/gsm_domains.conf:system/etc/wifi/gsm_domains.conf \
-    $(COMMON_PATH)/rootdir/system/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    $(COMMON_PATH)/rootdir/system/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+    $(COMMON_PATH)/rootdir/system/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    $(COMMON_PATH)/rootdir/system/etc/wifi/p2p_supplicant.conf:system/etc/wifi/p2p_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh \
