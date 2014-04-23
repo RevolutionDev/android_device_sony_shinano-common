@@ -18,7 +18,6 @@ busybox mkdir -m 555 -p /proc
 busybox mkdir -m 755 -p /sys
 
 # create device nodes
-busybox mknod -m 600 /dev/block/mmcblk0 b 179 0
 busybox mknod -m 600 ${BOOTREC_EVENT_NODE}
 busybox mknod -m 666 /dev/null c 1 3
 
@@ -30,6 +29,9 @@ busybox mount -t sysfs sysfs /sys
 busybox echo 255 > ${BOOTREC_LED_RED}
 busybox echo 0 > ${BOOTREC_LED_GREEN}
 busybox echo 255 > ${BOOTREC_LED_BLUE}
+
+# trigger vibration
+busybox echo 200 > /sys/class/timed_output/vibrator/enable
 
 # keycheck
 busybox cat ${BOOTREC_EVENT} > /dev/keycheck&
